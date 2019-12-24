@@ -1,22 +1,20 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
-float PowerA3(float a)
+
+double PowerA3(double a)
 {
-    float b;
-    b=a*a*a;
+    int b = a * a * a;
     return b;
 }
+
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    cout<<"Введите значения"<<endl;
-    float x[5];
-    for (int i=0; i<5; i++)
-    {
-        cin>>x[i];
+    double x, i;
+    for (i = 0; i < 5; i++){
+        cin >> x;
+        cout << PowerA3(x) << endl;
     }
-    for (int i=0; i<5; i++)
-    {
-        cout<<PowerA3(x[i])<<endl;
-    }
+    return 0;
+    
 }
