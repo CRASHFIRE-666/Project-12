@@ -1,32 +1,38 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
-float Fact2(int n)
+
+double Fact2(int n)
 {
-    float b=1;
-    if (n%2==0)
-    {
-        while (n>0)
-        {
-            b=b*n;
-            n-=2;
+    int i;
+    double answer;
+    answer = 1;
+    if (n % 2 == 0){
+        for (i = 2; i <= n; i += 2){
+            answer *= i;
         }
     }
-    else
-    {
-        while (n>0)
-        {
-            b=b*n;
-            n-=2;
+    else{
+        for (i = 1; i <= n; i+= 2){
+            answer *= i;
         }
     }
-    return b;
+    return answer;
+    
 }
+
 int main()
 {
-    setlocale(LC_ALL, "Russian");
     int x;
-    cout<<"Введите число"<<endl;
-    cin>>x;
-    cout<<Fact2(x)<<endl;
+    
+    cin >> x;
+    
+    if (x > 0){
+        cout << Fact2(x) << endl;;
+    }
+    else{
+        cout << "NEPRAVILNYE ZNACHENYA" << endl;
+    }
+    
     return 0;
-}
+    
