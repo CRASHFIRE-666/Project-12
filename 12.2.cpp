@@ -1,27 +1,28 @@
 #include <iostream>
-
+#include <cmath>
 using namespace std;
 
-int Sign(double X)
+int Sign(int a)
 {
-    if (X > 0.0)
-    {
-        return 1;
+    if (a > 0){
+    return 1;
     }
-    else if (X < 0.0)
-    {
-        return -1;
-    }
-    else
-    {
+    else if (a == 0){
         return 0;
+    }
+    else{
+        return -1;
     }
 }
 
 int main()
 {
-    double X;
-    cin >> X;
-    cout << Sign(X)<<endl;
+    int x;
+    
+    cin >> x;
+    
+    cout << Sign(x);
+    
     return 0;
+    
 }
