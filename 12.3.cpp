@@ -1,18 +1,25 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
-float RignS(float r1,float r2)
+
+double RingS(double r1, double r2)
 {
-    const float pi=3.14;
-    return pi*r1*r1-pi*r2*r2;
+    double s;
+    
+    s = 3.14 * (r1 * r1 - r2 * r2);
+    
+    return s;
 }
+
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    cout<<"Введите значения";
-    float q1,q2,a1,a2,z1,z2;
-    cin>>q1>>q2>>a1>>a2>>z1>>z2;
-    cout<<"S1="<<RignS(q1,q2)<<endl;
-    cout<<"S2="<<RignS(a1,a2)<<endl;
-    cout<<"S3="<<RignS(z1,z2)<<endl;
+    int x, y, i;
+    
+    for (i = 0; i < 3; i++){
+        cin >> x;
+        cin >> y;
+        cout << RingS(x, y);
+    }
     return 0;
+    
 }
